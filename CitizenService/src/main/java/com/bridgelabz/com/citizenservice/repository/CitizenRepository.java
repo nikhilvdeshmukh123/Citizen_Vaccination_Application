@@ -1,0 +1,11 @@
+package com.bridgelabz.com.citizenservice.repository;
+
+import com.bridgelabz.com.citizenservice.entity.Citizen;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface CitizenRepository extends JpaRepository<Citizen, Integer> {
+
+    public List<Citizen> findByVaccinationCenterId(Integer id);
+}
